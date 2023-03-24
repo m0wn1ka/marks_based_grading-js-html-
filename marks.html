@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>makrs</title>
+        
+            <!-- <script src="marks.js"></script> -->
+        
+    </head>
+    <body>
+        <form>
+           total marks: <input type="text" id="total"><br>
+            present marks:<input type="text" id="present"><br>
+            <input type="button" onclick="fun()" value="submit"><br>
+            output<br>
+            <table>
+                <tr>
+                    <td id="demo"></td>
+                </tr>
+                <tr>
+                    <td id="grade"></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            let ans=0;
+            function fun(){
+let t=document.getElementById("total").value;
+let p=document.getElementById("present").value;
+ans=t/p;
+document.getElementById("demo").innerHTML=ans;
+if(ans>8){
+    document.getElementById("grade").innerHTML="a+"
+}
+else{
+    document.getElementById("grade").innerHTML="below a"
+}
+
+            }
+            
+        </script>
+    </body>
+</html>
